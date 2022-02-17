@@ -15,19 +15,19 @@ How to use
         <url>https://jitpack.io</url>
     </repository>
 
-   	<dependency>
-       	<groupId>com.github.RDProjectOfficial</groupId>
+    <dependency>
+        <groupId>com.github.RDProjectOfficial</groupId>
        	<artifactId>Repo name</artifactId>
        	<version>Release tag</version>
-   	</dependency>
+    </dependency>
 
   • Add Dependency into plugin.yml (For Local .jar)
    	
-	• name: ExamplePlugin
-	• version: 1.0
-	• api-version: "1.13"
-	• main: com.rdproject.example.ExamplePlugin
-	• depend: [WaterCore]
+	name: ExamplePlugin
+	version: 1.0
+	api-version: "1.13"
+	main: com.rdproject.example.ExamplePlugin
+	depend: [WaterCore]
 
 Commands:
 
@@ -42,7 +42,7 @@ Features:
 
 Thanks for API's
 
-  • ScoreBoard: https://github.com/MrMicky-FR/FastBoard
-  • InventoryManager: https://github.com/MrMicky-FR/FastInv
-  • SQL Database: https://github.com/forumat-plugins/ForumatCore
+	• ScoreBoard: https://github.com/MrMicky-FR/FastBoard
+	• InventoryManager: https://github.com/MrMicky-FR/FastInv
+	• SQL Database: https://github.com/forumat-plugins/ForumatCore
 
