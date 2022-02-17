@@ -23,11 +23,11 @@ How to use
 
   • Add Dependency into plugin.yml (For Local .jar)
    	
-  • name: ExamplePlugin
-  • version: 1.0
-  • api-version: "1.13"
-  • main: com.rdproject.example.ExamplePlugin
-  • depend: [WaterCore]
+	• name: ExamplePlugin
+	• version: 1.0
+	• api-version: "1.13"
+	• main: com.rdproject.example.ExamplePlugin
+	• depend: [WaterCore]
 
 Commands:
 
