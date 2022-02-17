@@ -7,5 +7,5 @@ description: Core API for SomePlugins & WaterPlugins (Spigot Version)
 website: https://github.com/RDProjectOfficial
 commands:
   watercore:
-    description: WaterCore Command
+    description: RDSystem Command
     aliases: [api, system, core]
