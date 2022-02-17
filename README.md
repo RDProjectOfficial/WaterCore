@@ -37,7 +37,6 @@
 
 	• API Plugin
 	• Support All Versions
-	• All Customizable.
 	• Lightweight and minimal performance impact.
 
 ## Thanks for API's
