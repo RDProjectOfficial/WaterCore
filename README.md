@@ -1,4 +1,4 @@
-How to use
+# How to use
 
    • Add the repository and dependency to your plugin:
 
@@ -29,18 +29,18 @@ How to use
 	main: com.rdproject.example.ExamplePlugin
 	depend: [WaterCore]
 
-Commands:
+## Commands:
 
     • /watercore - MainCommand (Shows Authors;NoPermission)
 						
-Features:
+## Features:
 
 	• API Plugin
 	• Support All Versions
 	• All Customizable.
 	• Lightweight and minimal performance impact.
 
-Thanks for API's
+## Thanks for API's
 
 	• ScoreBoard: https://github.com/MrMicky-FR/FastBoard
 	• InventoryManager: https://github.com/MrMicky-FR/FastInv
