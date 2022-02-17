@@ -1,4 +1,3 @@
-https://img.shields.io/github/checks-status/RDProjectOfficial/WaterCore/master
 # How to use
 
    • Add the repository and dependency to your plugin:
