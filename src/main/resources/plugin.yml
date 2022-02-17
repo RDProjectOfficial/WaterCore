@@ -1,0 +1,7 @@
+name: WaterCore
+version: '${project.version}'
+main: com.rdproject.watercore.WaterCore
+api-version: 1.13
+authors: [ RDProject ]
+description: Core API for WaterPlugins (Spigot Version)
+website: https://github.com/RDProjectOfficial
