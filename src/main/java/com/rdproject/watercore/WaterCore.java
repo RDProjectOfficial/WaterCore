@@ -40,7 +40,7 @@ public final class WaterCore extends JavaPlugin {
 
     public void LoadUtils() {
         new Metrics(this, 14353);
-        UpdateChecker updateChecker = new UpdateChecker(this, 100029);
+        UpdateChecker updateChecker = new UpdateChecker(this, 100097);
         try {
             if (updateChecker.checkForUpdates()) {
                 getLogger().info(LIST);
