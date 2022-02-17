@@ -5,3 +5,7 @@ api-version: 1.13
 author: RDProject
 description: Core API for SomePlugins & WaterPlugins (Spigot Version)
 website: https://github.com/RDProjectOfficial
+commands:
+  watercore:
+    description: WaterCore Command
+    aliases: [api, system, core]
