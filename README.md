@@ -17,8 +17,8 @@
 
     <dependency>
         <groupId>com.github.RDProjectOfficial</groupId>
-       	<artifactId>Repo name</artifactId>
-       	<version>Release tag</version>
+       	<artifactId>WaterCore</artifactId>
+       	<version>1.0</version>
     </dependency>
 
   • Add Dependency into plugin.yml (For Local .jar)
