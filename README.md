@@ -18,14 +18,14 @@
     <dependency>
         <groupId>com.github.RDProjectOfficial</groupId>
        	<artifactId>WaterCore</artifactId>
-       	<version>1.0</version>
+       	<version>1.1</version>
     </dependency>
 
   • Add Dependency into plugin.yml (For Local .jar)
    	
 	name: ExamplePlugin
-	version: 1.0
-	api-version: "1.13"
+	version: 1.1
+	api-version: "1.17"
 	main: com.rdproject.example.ExamplePlugin
 	depend: [WaterCore]
 
@@ -44,4 +44,5 @@
 	• ScoreBoard: https://github.com/MrMicky-FR/FastBoard
 	• InventoryManager: https://github.com/MrMicky-FR/FastInv
 	• SQL Database: https://github.com/forumat-plugins/ForumatCore
+	• Particles: https://github.com/MrMicky-FR/FastParticles
 
