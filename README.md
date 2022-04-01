@@ -41,6 +41,7 @@
 
 ## Thanks for API's
 
+	• SoftUtil (Comfortable Logging, DependChecker, GetAuthor(), GetVersion(), GetMain(main class), PAPI Support Set MSG, Save & Also Config Modules, CMDManager(), ListenerManager(), DebugLog, LevelLogging): https://github.com/RDProjectOfficial/WaterCore
 	• ScoreBoard: https://github.com/MrMicky-FR/FastBoard
 	• InventoryManager: https://github.com/MrMicky-FR/FastInv
 	• SQL Database: https://github.com/forumat-plugins/ForumatCore
