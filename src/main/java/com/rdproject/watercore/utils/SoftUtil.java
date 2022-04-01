@@ -47,6 +47,10 @@ public class SoftUtil {
         Bukkit.getConsoleSender().sendMessage(main);
     }
 
+    public static void TabLManager(JavaPlugin plugin, String command, TabExecutor ex) {
+        Objects.requireNonNull(plugin.getCommand(command)).setTabCompleter(ex);
+    }
+
         public static void PAPIDepend(JavaPlugin plugin) {
             final String ENABLED_PLACEHOLDERAPI = "§fHooked into §cPlaceholderAPI!";
             final String NO_PLACEHOLDERAPI = "§fNot Found §cPlaceholderAPI!";
@@ -113,7 +117,7 @@ public class SoftUtil {
 
     //Translate
     public static String translate(String message) {
-        return org.bukkit.ChatColor.translateAlternateColorCodes('&', message);
+        return net.md_5.bungee.api.ChatColor.translateAlternateColorCodes('&', message);
     }
 
     //Version
