@@ -30,6 +30,10 @@ public class SoftUtil {
         Bukkit.getConsoleSender().sendMessage(msg);
     }
 
+    public static void JavaLogger(JavaPlugin plugin, String m) {
+        System.out.println("&8[&c" + plugin.getName() + "&8]&r " + m);
+    }
+
     public static void debug(JavaPlugin plugin, String msg) {
         log(plugin, "&8[&1DEBUG&8]&r" + msg);
     }
