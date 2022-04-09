@@ -1,175 +1,57 @@
-package com.rdproject.watercore.utils;
+package com.rdproject.utils;
 
 import org.apache.logging.log4j.*;
 import org.apache.logging.log4j.core.*;
 import org.apache.logging.log4j.core.Logger;
 import org.apache.logging.log4j.message.*;
 
-import me.clip.placeholderapi.*;
 import org.bukkit.*;
 import org.bukkit.command.*;
-import org.bukkit.configuration.*;
-import org.bukkit.configuration.file.*;
-import org.bukkit.entity.Player;
-import org.bukkit.event.*;
 import org.bukkit.plugin.java.*;
 
-import java.io.*;
 import java.util.*;
 import java.util.logging.Level;
 
 public class SoftUtil {
-
-    public static void LoggerLevel(JavaPlugin plugin, Level l, String s) {
-        String msg = translate("&8[&c" + plugin.getName() + "&8]&r ");
-        Bukkit.getLogger().log(l, msg + s);
+    public static void log(final JavaPlugin plugin, final String msg) {
+        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&c" + plugin.getName() + "&8]&r " + msg));
     }
-
-    public static void log(JavaPlugin plugin, String msg) {
-        msg = translate("&8[&c" + plugin.getName() + "&8]&r " + msg);
-        Bukkit.getConsoleSender().sendMessage(msg);
+    public static void debug(final String msg) {
+        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&1DEBUG&8]&r" + msg));
     }
-
-    public static void JavaLogger(JavaPlugin plugin, String m) {
-        System.out.println("&8[&c" + plugin.getName() + "&8]&r " + m);
+    public static void startup(final JavaPlugin plugin, final String msg, final String version) {
+        Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&b" + plugin.getName() + "&8]&b " + "\n" + msg + " Version: " + version));
     }
-
-    public static void debug(JavaPlugin plugin, String msg) {
-        log(plugin, "&8[&1DEBUG&8]&r" + msg);
-    }
-
-    public static void CMDManager(JavaPlugin plugin, String command, CommandExecutor ex) {
-        Objects.requireNonNull(plugin.getCommand(command)).setExecutor(ex);
-    }
-
-    public static void ListenerManager(JavaPlugin plugin, Listener l) {
-        Bukkit.getPluginManager().registerEvents(l, plugin);
-    }
-
-    public static void startup(JavaPlugin plugin, String msg, String version) {
-        String main = ChatColor.translateAlternateColorCodes('&', "&8[&c" + plugin.getName() + "&8]&r " + "\n" + msg + " Version " + version);
-        Bukkit.getConsoleSender().sendMessage(main);
-    }
-
-    public static void TabLManager(JavaPlugin plugin, String command, TabExecutor ex) {
-        Objects.requireNonNull(plugin.getCommand(command)).setTabCompleter(ex);
-    }
-
-        public static void PAPIDepend(JavaPlugin plugin) {
-            final String ENABLED_PLACEHOLDERAPI = "§fHooked into §cPlaceholderAPI!";
-            final String NO_PLACEHOLDERAPI = "§fNot Found §cPlaceholderAPI!";
-            if (plugin.getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
-                log(plugin, ENABLED_PLACEHOLDERAPI);
-            } else {
-                log(plugin, NO_PLACEHOLDERAPI);
-            }
-        }
-
-        public static void ProtocolLibDepend(JavaPlugin plugin) {
-            final String ENABLED_PROTOCOLLIB = "§fHooked into §cProtocolLib!";
-            final String NO_PROTOCOLLIB = "§fNot Found §cProtocolLib!";
-            if (plugin.getServer().getPluginManager().getPlugin("ProtocolLib") != null) {
-                log(plugin, ENABLED_PROTOCOLLIB);
-            } else {
-                log(plugin, NO_PROTOCOLLIB);
-            }
-        }
-
-        public static void LuckPermsDepend(JavaPlugin plugin) {
-            final String ENABLED_LUCKPERMS = "§fHooked into §cLuckPerms!";
-            final String NO_LUCKPERMS = "§fNot Found §cLuckPerms!";
-            if (plugin.getServer().getPluginManager().getPlugin("LuckPerms") != null) {
-                log(plugin, ENABLED_LUCKPERMS);
-            } else {
-                log(plugin, NO_LUCKPERMS);
-            }
-        }
-
-    public static void WaterCoreDepend(JavaPlugin plugin) {
-        final String ENABLED_WATERCORE = "§fHooked into §cWaterCore!";
-        final String NO_WATERCORE = "§fNot Found §cWaterCore!";
-        if (plugin.getServer().getPluginManager().getPlugin("LuckPerms") != null) {
-            log(plugin, ENABLED_WATERCORE);
-        } else {
-            log(plugin, NO_WATERCORE);
-            plugin.getServer().getPluginManager().disablePlugin(plugin);
-        }
-    }
-
-    public static void Save(JavaPlugin plugin, File cgf, FileConfiguration cg) {
-        try {
-            cg.save(cgf);
-        } catch (IOException e) {
-            LoggerLevel(plugin, Level.SEVERE, "Error with Saving Configuration, Check Log!");
-            e.printStackTrace();
-        }
-    }
-
-    public static void Load(JavaPlugin plugin, File cgf, FileConfiguration cg) {
-        try {
-            cg.load(cgf);
-        } catch (IOException | InvalidConfigurationException e) {
-            LoggerLevel(plugin, Level.SEVERE, "Error with Loading Configuration, Check Log!");
-            e.printStackTrace();
-        }
-    }
-
-    //PAPI
-    public static void PAPI(Player p, String s) {
-        PlaceholderAPI.setPlaceholders(p, s);
-    }
-
-    //Translate
-    public static String translate(String message) {
+    public static String translate(final String message) {
         return net.md_5.bungee.api.ChatColor.translateAlternateColorCodes('&', message);
     }
-
-    //Version
-    public static String GetVersion(JavaPlugin plugin) {
-        return plugin.getDescription().getVersion();
-    }
-
-    //Author
-    public static List<String> GetAuthor(JavaPlugin plugin) {
-        return plugin.getDescription().getAuthors();
-    }
-
-    //Author
-    public static String GetMain(JavaPlugin plugin) {
-        return plugin.getDescription().getMain();
-    }
-
-    //Updater
-    public static void LoadUpdater(JavaPlugin plugin, int metrics, int projectid, String prefix, String LIST) {
+    public static void updater(final JavaPlugin plugin, final int metrics, final int projectid, final String prefix, final String list) {
         new Metrics(plugin, metrics);
         UpdateChecker updateChecker = new UpdateChecker(plugin, projectid);
         ConsoleCommandSender cs = Bukkit.getConsoleSender();
         try {
             if (updateChecker.checkForUpdates()) {
-                cs.sendMessage(LIST);
+                cs.sendMessage(list);
                 cs.sendMessage(    prefix);
                 cs.sendMessage("");
                 cs.sendMessage("§8× §7Update Available!");
                 cs.sendMessage("§8× §7Download it from Spigot!");
                 cs.sendMessage("");
-                cs.sendMessage(LIST);
+                cs.sendMessage(list);
             } else {
-                cs.sendMessage(LIST);
+                cs.sendMessage(list);
                 cs.sendMessage(    prefix);
                 cs.sendMessage("");
                 cs.sendMessage("§8× §7You are using the Latest Version!");
                 cs.sendMessage("");
-                cs.sendMessage(LIST);
+                cs.sendMessage(list);
             }
         } catch (Exception e) {
-            LoggerLevel(plugin, Level.SEVERE, "Error with Update Checker, Check Log!");
+            Bukkit.getLogger().log(Level.SEVERE, "Error with Update Checker, Check Log!");
             e.printStackTrace();
         }
     }
-
-    //Vengine Licence
-    //https://github.com/zSkillCode/Log4ShellFix/blob/master/src/main/java/com/skillcode/log4shellfix/Log4ShellFix.java
-    public static void Log4ShellFix() {
+    public static void log4shell() {
         final Logger logger = (Logger) LogManager.getRootLogger();
         logger.addFilter(new Filter() {
             @Override
@@ -283,7 +165,6 @@ public class SoftUtil {
             }
         });
     }
-
     private static Filter.Result check(final String message) {
         return message.toLowerCase(Locale.ROOT).contains("${") ? Filter.Result.DENY : Filter.Result.NEUTRAL;
     }

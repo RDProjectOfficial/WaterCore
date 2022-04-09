@@ -1,10 +1,9 @@
-package com.rdproject.watercore.utils;
+package com.rdproject.utils;
 
 import org.bukkit.plugin.*;
 import java.io.*;
 import java.net.*;
 
-@SuppressWarnings("ALL")
 public class UpdateChecker {
     private int project = 0;
 
@@ -20,7 +19,9 @@ public class UpdateChecker {
         this.project = projectID;
         try {
             this.checkURL = new URL("https://api.spigotmc.org/legacy/update.php?resource=" + projectID);
-        } catch (MalformedURLException ex) {}
+        } catch (MalformedURLException ex) {
+            ex.printStackTrace();
+        }
     }
 
     public int getProjectID() {

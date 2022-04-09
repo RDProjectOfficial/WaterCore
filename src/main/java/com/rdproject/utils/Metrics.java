@@ -1,4 +1,4 @@
-package com.rdproject.watercore.utils;
+package com.rdproject.utils;
 
 /*
  * This Metrics class was auto-generated and can be copied into your project if you are
@@ -32,7 +32,6 @@ import org.bukkit.entity.*;
 import org.bukkit.plugin.*;
 import org.bukkit.plugin.java.*;
 
-@SuppressWarnings("ALL")
 public class Metrics {
 
     private final Plugin plugin;

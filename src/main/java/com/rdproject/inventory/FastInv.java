@@ -1,4 +1,4 @@
-package com.rdproject.watercore.inventory;
+package com.rdproject.inventory;
 
 import org.bukkit.*;
 import org.bukkit.entity.*;
@@ -17,7 +17,6 @@ import java.util.stream.*;
  * @version 3.0.3
  */
 
-@SuppressWarnings("ALL")
 public class FastInv implements InventoryHolder {
 
     private final Map<Integer, Consumer<InventoryClickEvent>> itemHandlers = new HashMap<>();

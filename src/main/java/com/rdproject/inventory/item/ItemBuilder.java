@@ -1,4 +1,4 @@
-package com.rdproject.watercore.inventory.item;
+package com.rdproject.inventory.item;
 
 import org.bukkit.*;
 import org.bukkit.enchantments.*;
@@ -14,7 +14,6 @@ import java.util.function.*;
  * @author MrMicky
  */
 
-@SuppressWarnings("ALL")
 public class ItemBuilder {
 
     private final ItemStack item;

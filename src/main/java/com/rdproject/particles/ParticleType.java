@@ -1,4 +1,4 @@
-package com.rdproject.watercore.particles;
+package com.rdproject.particles;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;

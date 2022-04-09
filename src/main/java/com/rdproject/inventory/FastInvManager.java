@@ -1,4 +1,4 @@
-package com.rdproject.watercore.inventory;
+package com.rdproject.inventory;
 
 import org.bukkit.*;
 import org.bukkit.entity.*;
@@ -16,7 +16,6 @@ import java.util.concurrent.atomic.*;
  * @author MrMicky
  */
 
-@SuppressWarnings("ALL")
 public final class FastInvManager {
 
     private static final AtomicBoolean REGISTERED = new AtomicBoolean(false);

@@ -1,4 +1,4 @@
-package com.rdproject.watercore.scoreboard;
+package com.rdproject.scoreboard;
 
 /*
  * This file is part of FastBoard, licensed under the MIT License.
@@ -41,7 +41,6 @@ import java.util.concurrent.*;
  * @version 1.2.1
  */
 
-@SuppressWarnings("ALL")
 public class FastBoard {
 
     private static final Map<Class<?>, Field[]> PACKETS = new HashMap<>(8);

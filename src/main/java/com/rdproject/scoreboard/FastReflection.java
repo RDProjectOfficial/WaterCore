@@ -1,4 +1,4 @@
-package com.rdproject.watercore.scoreboard;
+package com.rdproject.scoreboard;
 
 /*
  * This file is part of FastBoard, licensed under the MIT License.
@@ -37,7 +37,6 @@ import java.util.function.*;
  * @author MrMicky
  */
 
-@SuppressWarnings("ALL")
 public final class FastReflection {
 
     private static final String NM_PACKAGE = "net.minecraft";

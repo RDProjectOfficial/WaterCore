@@ -1,11 +1,7 @@
 name: WaterCore
-main: com.rdproject.watercore.WaterCore
-version: 1.3
-api-version: 1.17
+main: com.rdproject.WaterCore
+version: 1.4
+api-version: 1.18
 author: RDProject
-description: Core API for SomePlugins & WaterPlugins (Spigot Version)
+description: Core API
 website: https://github.com/RDProjectOfficial
-commands:
-  watercore:
-    description: WaterCore Command
-    aliases: [api, system, core]
