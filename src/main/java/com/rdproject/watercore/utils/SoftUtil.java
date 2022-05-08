@@ -23,10 +23,9 @@ public class SoftUtil {
         Bukkit.getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&b" + plugin.getName() + "&8]&b " + "\n" + msg + " Version: " + version));
     }
     public static String translate(final String message) {
-        return net.md_5.bungee.api.ChatColor.translateAlternateColorCodes('&', message);
+        return ChatColor.translateAlternateColorCodes('&', message);
     }
-    public static void updater(final JavaPlugin plugin, final int metrics, final int projectid, final String prefix, final String list) {
-        new Metrics(plugin, metrics);
+    public static void updater(final JavaPlugin plugin, final int projectid, final String prefix, final String list) {
         UpdateChecker updateChecker = new UpdateChecker(plugin, projectid);
         ConsoleCommandSender cs = Bukkit.getConsoleSender();
         try {
