@@ -26,7 +26,7 @@
 	name: ExamplePlugin
 	version: 1.4
 	api-version: "1.18"
-	main: com.rdproject.ExamplePlugin
+	main: com.rdproject.exampleplugin.ExamplePlugin
 	depend: [WaterCore]
 					
 ## Features:
