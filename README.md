@@ -18,13 +18,13 @@
     <dependency>
         <groupId>com.github.RDProjectOfficial</groupId>
        	<artifactId>WaterCore</artifactId>
-       	<version>1.4</version>
+       	<version>1.5</version>
     </dependency>
 
   • Add Dependency into plugin.yml (For Local .jar)
    	
 	name: ExamplePlugin
-	version: 1.4
+	version: 1.5
 	api-version: "1.18"
 	main: com.rdproject.exampleplugin.ExamplePlugin
 	depend: [WaterCore]
