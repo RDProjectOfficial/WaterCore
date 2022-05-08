@@ -1,4 +1,4 @@
-package com.rdproject.utils;
+package com.rdproject.watercore.utils;
 
 import org.apache.logging.log4j.*;
 import org.apache.logging.log4j.core.*;

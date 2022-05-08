@@ -1,4 +1,4 @@
-package com.rdproject.scoreboard;
+package com.rdproject.watercore.scoreboard;
 
 /*
  * This file is part of FastBoard, licensed under the MIT License.

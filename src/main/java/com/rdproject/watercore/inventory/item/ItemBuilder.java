@@ -1,4 +1,4 @@
-package com.rdproject.inventory.item;
+package com.rdproject.watercore.inventory.item;
 
 import org.bukkit.*;
 import org.bukkit.enchantments.*;

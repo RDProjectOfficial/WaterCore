@@ -1,6 +1,6 @@
 name: WaterCore
-main: com.rdproject.WaterCore
-version: 1.4
+main: com.rdproject.watercore.WaterCore
+version: 1.5
 api-version: 1.18
 author: RDProject
 description: Core API

@@ -1,4 +1,4 @@
-package com.rdproject.particles;
+package com.rdproject.watercore.particles;
 
 import org.bukkit.*;
 import org.bukkit.inventory.*;

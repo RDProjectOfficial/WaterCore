@@ -1,4 +1,4 @@
-package com.rdproject.utils;
+package com.rdproject.watercore.utils;
 
 import org.bukkit.plugin.*;
 import java.io.*;

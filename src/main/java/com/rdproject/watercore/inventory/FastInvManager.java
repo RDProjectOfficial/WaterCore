@@ -1,4 +1,4 @@
-package com.rdproject.inventory;
+package com.rdproject.watercore.inventory;
 
 import org.bukkit.*;
 import org.bukkit.entity.*;
